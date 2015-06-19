@@ -1,0 +1,27 @@
+<template name="quiz1form">
+	
+	{{#if projectdata}}
+	<h1>Edit your Project Info</h1>
+	{{#with projectdata}}
+		<form id="editquiz1form">
+			first: <input type="text" name="first" value="{{first}}"><br/>
+			last: <input type="text" name="last" value="{{last}}"><br/>
+			project: <input type="text" name="project" value="{{project}}"><br/>
+			meteorURL: <input type="text" name="meteorURL" value="{{meteorURL}}"><br/>
+			gitURL: <input type="text" name="gitURL" value="{{gitURL}}"><br/>
+			<input type="submit">
+		</form>
+	{{/with}}
+	{{else}}
+	<h1>Enter your Project Info</h1>
+	<form id="createquiz1form">
+			first: <input type="text" name="first"><br/>
+			last: <input type="text" name="last"><br/>
+			project: <input type="text" name="project"><br/>
+			meteorURL: <input type="text" name="meteorURL"><br/>
+			gitURL: <input type="text" name="gitURL"><br/>
+			<input type="submit">
+		</form>
+	{{/if}}
+</template>
+
